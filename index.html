@@ -89,7 +89,7 @@
             const withrdawAmountNum = parseFloat(withrdawAmount);
             spanTextUpdate("currentWithdraw",withrdawAmountNum);
             document.getElementById("withrdawAmount").value="";
-            spanTextUpdate2("balanceAmount",withrdawAmount);
+            spanTextUpdate("balanceAmount",-1 * withrdawAmount);
 
 
         })
@@ -101,12 +101,6 @@
             document.getElementById(id).innerText = Balance;
         }
 
-        function spanTextUpdate2(id,depositNum){
-            const Amount = document.getElementById(id).innerText;
-            const AmountNum = parseFloat(Amount);
-            const Balance = AmountNum - depositNum;
-            document.getElementById(id).innerText = Balance;
-        }
 
 
     </script>
