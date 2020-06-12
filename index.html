@@ -76,9 +76,14 @@
         depositBtn.addEventListener("click",function(){
             const depositAmount = document.getElementById("depositAmount").value;
             const depositNum = parseFloat(depositAmount);
+            if(depositNum<=0){
+                alert("Deposti amount can't be negative");
+            }
+            else {
             spanTextUpdate("currentDeposit",depositNum);
             document.getElementById("depositAmount").value="";
             spanTextUpdate("balanceAmount",depositNum);
+            }
 
         })
 
